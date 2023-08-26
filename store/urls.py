@@ -1,0 +1,38 @@
+from django.urls import path
+from . import views as v_store
+urlpatterns = [
+    path('contractors/', v_store.contractor_list, name='contractor_list'),
+    path('products/', v_store.product_list, name='product_list'),
+    path('contractors/<int:pk>/', v_store.contractor_detail, name='contractor_detail'),
+    path('products/<int:pk>/', v_store.product_detail, name='product_detail'),
+    path('receipts/', v_store.receipt_list),
+    path('receipts/<int:pk>/', v_store.receipt_detail),
+    path('cancellation/', v_store.cancellation_list ),
+    path('cancellation/<int:pk>/', v_store.cancellation_detail),
+    path('inventory/', v_store.inventory_list ),
+    path('inventory/<int:pk>/', v_store.inventory_detail),
+    path('country/', v_store.country_list ),
+    path('country/<int:pk>/', v_store.country_detail),
+    path('department/', v_store.department_list ),
+    path('department/<int:pk>/', v_store.department_detail),
+    path('nds/', v_store.nds_list),
+    path('nds/<int:pk>/', v_store.nds_detail),
+    path('groups/', v_store.group_list),
+    path('groups/<int:pk>/', v_store.group_detail),
+    path('warehouse/', v_store.warehouse_list),
+    path('warehouse/<int:pk>/', v_store.warehouse_detail),
+    path('project/', v_store.project_list),
+    path('project/<int:pk>/', v_store.project_detail),
+    path('contact/', v_store.contact_list),
+    path('contact/<int:pk>/', v_store.contact_detail),
+    path('bank-codes/', v_store.bank_code_list),
+    path('bank-codes/<int:pk>/', v_store.bank_code_detail),
+    path('uom/', v_store.uom_list),
+    path('uom/<int:pk>/', v_store.uom_detail),
+    path('egais_code/', v_store.egais_code_list),
+    path('egais_code/<int:pk>/', v_store.egais_code_detail),
+    path('accounting_features/<int:pk>/', v_store.accounting_features_list),
+    path('accounting_features/<int:pk>/', v_store.accounting_features_detail),
+
+
+]
